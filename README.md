@@ -1,6 +1,6 @@
 # Awesome Inference-Time Steering
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Preprint](https://img.shields.io/badge/Preprint-Research%20Square-blue)](https://www.researchsquare.com/article/rs-9849186/v1) [![DOI](https://img.shields.io/badge/DOI-10.21203%2Frs.3.rs--9849186%2Fv1-green)](https://doi.org/10.21203/rs.3.rs-9849186/v1)
 
 A curated paper list for **inference-time model steering** — methods that control large language models by intervening on their internal computations during generation, with strength tunable and the intervention reversible per request.
 
@@ -504,8 +504,11 @@ If you find this resource useful, please cite our survey:
 ```bibtex
 @article{xue2026inferencetimesteering,
   title={Inference-Time Model Steering via Predictive-State Intervention: A Survey},
-  author={Xue, Renhao and Wang, Rui and Wang, Yawei and Cui, Yueying and Qian, Yiyue and Vaddamanu, Praneetha and Song, Huan and Marlowe, Hannah R},
-  year={2026}
+  author={Xue, Renhao and Wang, Rui and Wang, Yawei and Cui, Yueying and Qian, Yiyue and Vaddamanu, Praneetha and Song, Huan and Marlowe, Hannah},
+  year={2026},
+  journal={Research Square (Preprint)},
+  doi={10.21203/rs.3.rs-9849186/v1},
+  url={https://www.researchsquare.com/article/rs-9849186/v1}
 }
 ```
 
