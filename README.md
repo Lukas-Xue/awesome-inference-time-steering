@@ -237,25 +237,29 @@ Methods that modify output scores $\ell_t$ directly. Because there are no downst
     An, Park, Jin, Han. arXiv 2026. [paper](https://arxiv.org/abs/2601.10960)
     Note: z-normalized log-odds biases from labeled corpora; training-free multi-task control.
 
+46. **DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning**
+    Luo, Chen. arXiv 2026. [paper](https://arxiv.org/abs/2610.18862) [code](https://github.com/leoluolol/DoubtLess)
+    Note: per-step logit steering adds a tunable brief-minus-verbose logit difference from the same small model, conditioned on the current chain of thought, to a larger model's thinking logits; all model weights remain fixed.
+
 ---
 
 ## Distribution-Level Methods
 
 Methods that interpolate the model's output distribution with an external distribution after the forward pass. The base model's computation is unmodified.
 
-46. **Generalization through Memorization: Nearest Neighbor Language Models (kNN-LM)**
+47. **Generalization through Memorization: Nearest Neighbor Language Models (kNN-LM)**
     Khandelwal, Levy, Jurafsky, Zettlemoyer, Lewis. ICLR 2020. [paper](https://openreview.net/forum?id=HklBjCEKvH)
     Note: retrieves nearest neighbors from a datastore to interpolate with model distribution; domain adaptation by swapping datastore.
 
-47. **Improving Neural Language Models with a Continuous Cache**
+48. **Improving Neural Language Models with a Continuous Cache**
     Grave, Joulin, Usunier. ICLR 2017. [paper](https://openreview.net/forum?id=B184E5qee)
     Note: stores recent hidden activations; learned gate interpolates cache distribution with model output.
 
-48. **Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models**
+49. **Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models**
     Cao, Wang, Wei, Guo, Chen, Zhou, Lin. NeurIPS 2025. [paper](https://arxiv.org/abs/2508.09874)
     Note: parametric module replacing explicit retrieval; faster inference while maintaining distribution-interpolation interface.
 
-49. **MLP Memory: A Retriever-Pretrained Memory for Large Language Models**
+50. **MLP Memory: A Retriever-Pretrained Memory for Large Language Models**
     Wei, Cao, Wang, Kai, Guo, Zhou, Lin. ICLR 2026. [paper](https://arxiv.org/abs/2508.01832)
     Note: MLP-based parametric memory replacing kNN retrieval for faster inference.
 
@@ -265,11 +269,11 @@ Methods that interpolate the model's output distribution with an external distri
 
 Methods that modify the token selection rule $\mathcal{D}$ rather than the predictive state. Included as boundary cases.
 
-50. **Contrastive Decoding: Open-ended Text Generation as Optimization**
+51. **Contrastive Decoding: Open-ended Text Generation as Optimization**
     Li, Holtzman, Fried, Liang, Eisner, Hashimoto, Zettlemoyer, Lewis. ACL 2023. [paper](https://aclanthology.org/2023.acl-long.687/)
     Note: favors tokens where expert disagrees with amateur model.
 
-51. **NeuroLogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics**
+52. **NeuroLogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics**
     Lu, Welleck, West, Jiang, Kasai, Khashabi, Le Bras, Qin, Yu, Zellers, Smith, Choi. NAACL 2022. [paper](https://aclanthology.org/2022.naacl-main.57/)
     Note: enforces hard lexical constraints via lookahead search.
 
@@ -277,35 +281,35 @@ Methods that modify the token selection rule $\mathcal{D}$ rather than the predi
 
 ## Safety and Robustness
 
-52. **Refusal in Language Models Is Mediated by a Single Direction**
+53. **Refusal in Language Models Is Mediated by a Single Direction**
     Arditi, Obeso, Syed, Paleka, Panickssery, Gurnee, Nanda. NeurIPS 2024. [paper](https://arxiv.org/abs/2406.11717)
     Note: shows refusal behavior is mediated by a single removable direction; highlights safety fragility.
 
-53. **Steering Externalities: Benign Activation Steering Unintentionally Increases Jailbreak Risk for Large Language Models**
+54. **Steering Externalities: Benign Activation Steering Unintentionally Increases Jailbreak Risk for Large Language Models**
     Xiong, He, Chen, Ko, Ho. arXiv 2026. [paper](https://arxiv.org/abs/2602.04896)
     Note: demonstrates that even benign steering vectors can increase jailbreak vulnerability as a side effect.
 
-54. **Steering Safely or Off a Cliff? Rethinking Specificity and Robustness in Inference-Time Interventions**
+55. **Steering Safely or Off a Cliff? Rethinking Specificity and Robustness in Inference-Time Interventions**
     Goyal, Daumé III. EACL 2026. [paper](https://arxiv.org/abs/2602.06256)
     Note: evaluates robustness of steering under distribution shift; reveals brittleness of common approaches.
 
-55. **Toward Universal Steering and Monitoring of AI Models**
+56. **Toward Universal Steering and Monitoring of AI Models**
     Beaglehole, Radhakrishnan, Boix-Adsera, Belkin. Science 2026. [paper](https://www.science.org/doi/abs/10.1126/science.aea6792)
     Note: universal linear-representation-based steering and monitoring framework.
 
-56. **Jailbreaking the Matrix: Nullspace Steering for Controlled Model Subversion (HMNS)**
+57. **Jailbreaking the Matrix: Nullspace Steering for Controlled Model Subversion (HMNS)**
     Pramanik, Maliha, Jha, Jha. arXiv 2026. [paper](https://arxiv.org/abs/2604.10326)
     Note: nullspace steering jailbreak attack exploiting activation geometry.
 
-57. **The Hawthorne Effect in Reasoning Models: Evaluating and Steering Test Awareness**
+58. **The Hawthorne Effect in Reasoning Models: Evaluating and Steering Test Awareness**
     Abdelnabi, Salem. NeurIPS 2025 (Spotlight). [paper](https://arxiv.org/abs/2505.14617)
     Note: models alter behavior under evaluation; steering for test-awareness control.
 
-58. **DSO: Direct Steering Optimization for Bias Mitigation**
+59. **DSO: Direct Steering Optimization for Bias Mitigation**
     Monteiro Paes, Sivakumar, Wang, Fedzechkina, Theobald, Zappella, Apostoloff. CVPR 2026. [paper](https://arxiv.org/abs/2512.15926)
     Note: RL + subspace optimization for bias mitigation via steering.
 
-59. **Steered LLM Activations are Non-Surjective**
+60. **Steered LLM Activations are Non-Surjective**
     Mishra, Khashabi, Liu. ICLR Workshop 2026. [paper](https://arxiv.org/abs/2604.09839)
     Note: formalizes that steering can produce residual-stream states unreachable by any discrete prompt.
 
@@ -313,15 +317,15 @@ Methods that modify the token selection rule $\mathcal{D}$ rather than the predi
 
 ## Evaluation and Benchmarks
 
-60. **AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders**
+61. **AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders**
     Wu, Arora, Geiger, Wang, Huang, Jurafsky, Manning, Potts. ICML 2025. [paper](https://openreview.net/forum?id=K2CckZjNy0)
     Note: prompting outperforms representation-based steering on concept-level tasks (Gemma-2-2B/9B).
 
-61. **SAEBench: A Comprehensive Benchmark for Sparse Autoencoders in Language Model Interpretability**
+62. **SAEBench: A Comprehensive Benchmark for Sparse Autoencoders in Language Model Interpretability**
     Karvonen, Rager, Lin, Tigges, Bloom, Chanin, Lau, Farrell, McDougall, Ayonrinde, Till, Wearden, Conmy, Marks, Nanda. ICML 2025. [paper](https://openreview.net/forum?id=qrU3yNfX0d)
     Note: SAE proxy metrics (reconstruction loss, sparsity) do not reliably predict steering performance.
 
-62. **Evaluating Steering Techniques Using Human Similarity Judgments**
+63. **Evaluating Steering Techniques Using Human Similarity Judgments**
     Studdiford, Rogers, Suresh, Mukherjee. arXiv 2025. [paper](https://arxiv.org/abs/2505.19333)
     Note: human evaluation corroborates AxBench findings on steering effectiveness.
 
@@ -329,55 +333,55 @@ Methods that modify the token selection rule $\mathcal{D}$ rather than the predi
 
 ## Representation Engineering and Interpretability
 
-63. **Towards Monosemanticity: Decomposing Language Models With Dictionary Learning**
+64. **Towards Monosemanticity: Decomposing Language Models With Dictionary Learning**
     Anthropic. 2023. [paper](https://transformer-circuits.pub/2023/monosemantic-features/index.html)
     Note: foundational work on SAE dictionary learning for interpretable feature decomposition.
 
-64. **Scaling and Evaluating Sparse Autoencoders**
+65. **Scaling and Evaluating Sparse Autoencoders**
     Gao, Dupré la Tour, Tillman, Goh, Troll, Radford, Sutskever, Leike, Wu. ICLR 2025. [paper](https://arxiv.org/abs/2406.04093)
     Note: scaling laws and evaluation methodology for SAEs.
 
-65. **Not All Language Model Features Are One-Dimensionally Linear**
+66. **Not All Language Model Features Are One-Dimensionally Linear**
     Engels, Michaud, Liao, Gurnee, Tegmark. ICLR 2025. [paper](https://arxiv.org/abs/2405.14860)
     Note: some concepts are multi-dimensional manifolds (circles), limiting contrastive-vector methods.
 
-66. **The Linear Representation Hypothesis and the Geometry of Large Language Models**
+67. **The Linear Representation Hypothesis and the Geometry of Large Language Models**
     Park, Choe, Veitch. arXiv 2023. [paper](https://arxiv.org/abs/2311.03658)
     Note: theoretical grounding for why linear directions encode semantic concepts.
 
-67. **The Geometry of Truth: Emergent Linear Structure in LLM Representations of True/False Datasets**
+68. **The Geometry of Truth: Emergent Linear Structure in LLM Representations of True/False Datasets**
     Marks, Tegmark. arXiv 2023. [paper](https://arxiv.org/abs/2310.06824)
     Note: empirical evidence for linear truth representations enabling steering.
 
-68. **Discovering Latent Knowledge in Language Models Without Supervision**
+69. **Discovering Latent Knowledge in Language Models Without Supervision**
     Burns, Ye, Klein, Steinhardt. ICLR 2023. [paper](https://arxiv.org/abs/2212.03827)
     Note: unsupervised discovery of truth-related directions in activation space.
 
-69. **Brain-Grounded Axes for Reading and Steering LLM States**
+70. **Brain-Grounded Axes for Reading and Steering LLM States**
     Andric. arXiv 2025. [paper](https://arxiv.org/abs/2512.19399)
     Note: uses brain-activity-derived axes for interpretable steering directions.
 
-70. **Steering Large Language Models to Evaluate and Amplify Creativity**
+71. **Steering Large Language Models to Evaluate and Amplify Creativity**
     Olson, Ratzlaff, Hinck, Tseng, Lal. NeurIPS Workshop 2024 (Spotlight). [paper](https://arxiv.org/abs/2412.06060)
     Note: contrastive steering for creativity evaluation and amplification.
 
-71. **The Logical Implication Steering Method for Conditional Interventions on Transformer Generation (LIMS)**
+72. **The Logical Implication Steering Method for Conditional Interventions on Transformer Generation (LIMS)**
     Kalajdzievski. ICML 2025. [paper](https://arxiv.org/abs/2502.03618)
     Note: logic-rule-based conditional steering via logical implications.
 
-72. **DEAL: Disentangling Transformer Head Activations for LLM Steering**
+73. **DEAL: Disentangling Transformer Head Activations for LLM Steering**
     Zhan, Liu, Lu, Feng, Xie, Cao, Wu. ACL Workshop 2025. [paper](https://openreview.net/forum?id=HvXDK8Ryst)
     Note: causal attribution for disentangling per-head contributions to steering.
 
-73. **REAL: Reading Out Transformer Activations for Precise Localization in Language Model Steering**
+74. **REAL: Reading Out Transformer Activations for Precise Localization in Language Model Steering**
     Zhan, Liu, Xie, Cao, Wu. ICLR 2026. [paper](https://arxiv.org/abs/2506.08359)
     Note: VQ-AE-based precise localization of steering targets.
 
-74. **Faithful Bi-Directional Model Steering via Distribution Matching and Distributed Interchange Interventions (CDAS)**
+75. **Faithful Bi-Directional Model Steering via Distribution Matching and Distributed Interchange Interventions (CDAS)**
     Bao, Zhang, Chen, Su, Cai, Peng, Sun, Weng, Yan, Yin. ICLR 2026. [paper](https://arxiv.org/abs/2602.05234)
     Note: distribution-matching approach for faithful bi-directional control.
 
-75. **Neologism Learning as a Parameter-Efficient Alternative to Fine-Tuning for Model Steering**
+76. **Neologism Learning as a Parameter-Efficient Alternative to Fine-Tuning for Model Steering**
     Park, Ramamurthi, Terry. arXiv 2025. [paper](https://arxiv.org/abs/2512.18551)
     Note: learns steering via neologism tokens in input space.
 
@@ -385,19 +389,19 @@ Methods that modify the token selection rule $\mathcal{D}$ rather than the predi
 
 ## Multimodal Steering
 
-76. **Automating Steering for Safe Multimodal Large Language Models**
+77. **Automating Steering for Safe Multimodal Large Language Models**
     Wu, Wang, Xu, Cao, Oo, Hooi, Deng. EMNLP 2025. [paper](https://aclanthology.org/2025.emnlp-main.41/)
     Note: automated steering for safety in vision-language models.
 
-77. **Learning to Steer: Input-Dependent Steering for Multimodal LLMs**
+78. **Learning to Steer: Input-Dependent Steering for Multimodal LLMs**
     Parekh, Khayatan, Shukor, Dapogny, Newson, Cord. NeurIPS 2025. [paper](https://arxiv.org/abs/2508.12815)
     Note: input-dependent steering applied to multimodal architectures.
 
-78. **Analyzing Finetuning Representation Shift for Multimodal LLMs Steering**
+79. **Analyzing Finetuning Representation Shift for Multimodal LLMs Steering**
     Khayatan, Shukor, Parekh, Dapogny, Cord. ICCV 2025. [paper](https://openaccess.thecvf.com/content/ICCV2025/html/Khayatan_Analyzing_Finetuning_Representation_Shift_for_Multimodal_LLMs_Steering_ICCV_2025_paper.html)
     Note: analyzes how finetuning shifts representations and implications for steering in multimodal LLMs.
 
-79. **GGSS: Geodesic-Gated Spherical Steering for Inference-Time Debiasing of Generative Vision-Language Models**
+80. **GGSS: Geodesic-Gated Spherical Steering for Inference-Time Debiasing of Generative Vision-Language Models**
     Sun, Chen, Wei, Hsieh. EMNLP 2026. [paper](https://arxiv.org/abs/2608.25375) [code](https://github.com/dukesun99/GGSS)
     Note: norm-preserving geodesic rotation of visual-token activations with an adaptive per-token gate for demographic debiasing of frozen VLMs.
 
@@ -405,23 +409,23 @@ Methods that modify the token selection rule $\mathcal{D}$ rather than the predi
 
 ## Related Surveys
 
-80. **A Survey of Controllable Text Generation Using Transformer-based Pre-trained Language Models**
+81. **A Survey of Controllable Text Generation Using Transformer-based Pre-trained Language Models**
     Zhang, Song, Li, Zhou, Song. ACM Computing Surveys 2023. [paper](https://arxiv.org/abs/2201.05337)
     Note: broad controllable generation covering training-time and inference-time approaches.
 
-81. **A Comprehensive Study of Knowledge Editing for Large Language Models**
+82. **A Comprehensive Study of Knowledge Editing for Large Language Models**
     Zhang, Yao, Tian, Wang, Deng, Wang, Xi, Mao, Zhang, Ni, Cheng, Xu, Xu, Gu, Jiang, Xie, Huang, Liang, Zhang, Zhu, Zhou, Chen. arXiv 2024. [paper](https://arxiv.org/abs/2401.01286)
     Note: persistent factual update/weight editing (excluded from steering but related).
 
-82. **Representation Engineering for Large-Language Models: Survey and Research Challenges**
+83. **Representation Engineering for Large-Language Models: Survey and Research Challenges**
     Bartoszcze, Munshi, Sukidi, Yen, Yang, Williams-King, Le, Asuzu, Maple. arXiv 2025. [paper](https://arxiv.org/abs/2502.17601)
     Note: latent representation engineering survey; does not cover logit/distribution-level methods.
 
-83. **Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models**
+84. **Locate, Steer, and Improve: A Practical Survey of Actionable Mechanistic Interpretability in Large Language Models**
     Zhang, Zhang, Wang, et al. arXiv 2026. [paper](https://arxiv.org/abs/2601.14004)
     Note: organized around Interpretable Objects (what is targeted) rather than intervention location.
 
-84. **A Survey on LLM Inference-Time Self-Improvement**
+85. **A Survey on LLM Inference-Time Self-Improvement**
     Dong, Teleki, Caverlee. arXiv 2024. [paper](https://arxiv.org/abs/2412.14352)
     Note: broader inference-time improvement including search, verification, refinement.
 
@@ -429,7 +433,7 @@ Methods that modify the token selection rule $\mathcal{D}$ rather than the predi
 
 ## Toolkits and Frameworks
 
-85. **EasyEdit2: An Easy-to-use Steering Framework for Editing Large Language Models**
+86. **EasyEdit2: An Easy-to-use Steering Framework for Editing Large Language Models**
     Xu, Wang, Xu, Xu, Wang, Deng, Yao, Zheng, Chen, Zhang. EMNLP Demos 2025. [paper](https://aclanthology.org/2025.emnlp-demos.38/)
     Note: unified toolkit supporting multiple steering methods with a common interface.
 
@@ -437,27 +441,27 @@ Methods that modify the token selection rule $\mathcal{D}$ rather than the predi
 
 ## Background and Foundations
 
-86. **Attention is All You Need**
+87. **Attention is All You Need**
     Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, Polosukhin. NeurIPS 2017.
     Note: transformer architecture underlying all steering methods.
 
-87. **A Mathematical Framework for Transformer Circuits**
+88. **A Mathematical Framework for Transformer Circuits**
     Elhage, Nanda, Olsson, et al. Anthropic 2021. [paper](https://transformer-circuits.pub/2021/framework/index.html)
     Note: residual stream formalization enabling principled activation interventions.
 
-88. **Locating and Editing Factual Associations in GPT (ROME)**
+89. **Locating and Editing Factual Associations in GPT (ROME)**
     Meng, Bau, Andonian, Belinkov. NeurIPS 2022. [paper](https://arxiv.org/abs/2202.05262)
     Note: localization of factual associations to MLP layers; foundational for steering targets.
 
-89. **Transformer Feed-Forward Layers Are Key-Value Memories**
+90. **Transformer Feed-Forward Layers Are Key-Value Memories**
     Geva, Schuster, Berant, Levy. EMNLP 2021. [paper](https://arxiv.org/abs/2012.14913)
     Note: MLP layers as key-value stores; motivates feed-forward interventions.
 
-90. **Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small**
+91. **Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small**
     Wang, Variengien, Conmy, Shlegeris, Steinhardt. ICLR 2023. [paper](https://arxiv.org/abs/2211.00593)
     Note: mechanistic circuit discovery enabling targeted interventions.
 
-91. **Towards Best Practices of Activation Patching in Language Models: Metrics and Methods**
+92. **Towards Best Practices of Activation Patching in Language Models: Metrics and Methods**
     Zhang, Nanda. ICLR 2024. [paper](https://arxiv.org/abs/2309.16042)
     Note: best practices for activation patching; directly relevant to steering methodology.
 
@@ -467,35 +471,35 @@ Methods that modify the token selection rule $\mathcal{D}$ rather than the predi
 
 Included for context. These methods violate at least one defining criterion of steering (per-request tunability or reversibility without retraining).
 
-92. **CTRL: A Conditional Transformer Language Model for Controllable Generation**
+93. **CTRL: A Conditional Transformer Language Model for Controllable Generation**
     Keskar, McCann, Varshney, Xiong, Socher. arXiv 2019. [paper](https://arxiv.org/abs/1909.05858)
     Note: control codes at pretraining; not tunable at serving time.
 
-93. **Plug and Play Language Models: A Simple Approach to Controlled Text Generation (PPLM)**
+94. **Plug and Play Language Models: A Simple Approach to Controlled Text Generation (PPLM)**
     Dathathri, Madotto, Lan, Hung, Frank, Molino, Yosinski, Liu. ICLR 2020. [paper](https://openreview.net/forum?id=H1edEyBKDS)
     Note: hybrid; uses gradient updates during generation.
 
-94. **Prefix-Tuning: Optimizing Continuous Prompts for Generation**
+95. **Prefix-Tuning: Optimizing Continuous Prompts for Generation**
     Li, Liang. ACL 2021. [paper](https://aclanthology.org/2021.acl-long.353/)
     Note: learned continuous prefixes; requires retraining to change behavior.
 
-95. **The Power of Scale for Parameter-Efficient Prompt Tuning**
+96. **The Power of Scale for Parameter-Efficient Prompt Tuning**
     Lester, Al-Rfou, Constant. EMNLP 2021. [paper](https://aclanthology.org/2021.emnlp-main.243/)
     Note: soft prompt tuning; learned parameters not adjustable at serving time.
 
-96. **ReFT: Representation Finetuning for Language Models**
+97. **ReFT: Representation Finetuning for Language Models**
     Wu, Arora, Wang, Geiger, Jurafsky, Manning, Potts. NeurIPS 2024. [paper](https://arxiv.org/abs/2404.03592)
     Note: learns intervention parameters via gradient descent; not runtime-adjustable.
 
-97. **LoRA: Low-Rank Adaptation of Large Language Models**
+98. **LoRA: Low-Rank Adaptation of Large Language Models**
     Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, Chen. ICLR 2022. [paper](https://openreview.net/forum?id=nZeVKeeFYf9)
     Note: PEFT baseline; adapter swap not per-request tunable.
 
-98. **Chain-of-Thought Prompting Elicits Reasoning in Large Language Models**
+99. **Chain-of-Thought Prompting Elicits Reasoning in Large Language Models**
     Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le, Zhou. NeurIPS 2022. [paper](https://openreview.net/forum?id=_VjQlMeSB_J)
     Note: prompting baseline; no internal state modification.
 
-99. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models**
+100. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models**
     Yao, Yu, Zhao, Shafran, Griffiths, Cao, Narasimhan. NeurIPS 2023. [paper](https://openreview.net/forum?id=5Xc1ecxO1h)
     Note: search-based prompting baseline.
 
