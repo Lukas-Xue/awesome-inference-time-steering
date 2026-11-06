@@ -202,6 +202,10 @@ Methods that transform activation distributions or integrate a steering field wh
    Dixon, Roberts, Quinzan. arXiv 2026. [paper](https://arxiv.org/abs/2610.06383)
    Note: weights reference examples using curvature-aware influence functions before activation transport to reduce unrelated concept and token effects.
 
+1. **Beyond Linear Activation Steering: Invertible Latent Transformations for Controlling LLM Behavior (INNSteer)**
+   Nguyen, Le. NeurIPS 2026 (Spotlight). [paper](https://neurips.cc/virtual/2026/poster/148807) [code](https://github.com/nguyentuc/INNSteer)
+   Note: learns a layer-wise invertible neural network on hidden activations of a frozen LLM; a forward hook maps activations into the latent space, adds a latent mean-difference vector scaled by an inference-time strength α, and maps back through the exact inverse, giving a nonlinear, input-dependent update that is reversible per request.
+
 ### Stability-Oriented Methods
 
 1. **Selective Steering: Norm-Preserving Control Through Discriminative Layer Selection**
