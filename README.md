@@ -682,15 +682,19 @@ Included for context. These approaches use input-side control, learned parameter
      Wu, Arora, Wang, Geiger, Jurafsky, Manning, Potts. NeurIPS 2024. [paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/75008a0fba53bf13b0bb3b7bff986e0e-Abstract-Conference.html)
      Note: learns task-specific interventions on hidden representations of a frozen LM; retained as a representation-finetuning boundary case under the survey's definition.
 
-138. **LoRA: Low-Rank Adaptation of Large Language Models**
+138. **SPARK: Adaptive Parametric Knowledge Participation for Faithful Retrieval-Augmented Generation**
+     Li, Huang, Liu, Yan, Xie, Gu, Yu, Sun. arXiv 2026. [paper](https://arxiv.org/abs/2606.27786) [code](https://github.com/OpenBMB/SHIFT)
+     Note: learns a lightweight policy that rescales each FFN sublayer's contribution per decoding step on a frozen LM, trained with a faithfulness reward to reduce reliance on conflicting parametric knowledge in RAG; a learned intervention module rather than a per-request tunable steering signal.
+
+139. **LoRA: Low-Rank Adaptation of Large Language Models**
      Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, Chen. ICLR 2022. [paper](https://openreview.net/forum?id=nZeVKeeFYf9)
      Note: learns low-rank weight updates; a parameter-adaptation baseline, distinct from external interventions on predictive states.
 
-139. **Chain-of-Thought Prompting Elicits Reasoning in Large Language Models**
+140. **Chain-of-Thought Prompting Elicits Reasoning in Large Language Models**
      Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le, Zhou. NeurIPS 2022. [paper](https://proceedings.neurips.cc/paper_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html)
      Note: input-side reasoning-prompting baseline without an explicit predictive-state intervention.
 
-140. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models**
+141. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models**
      Yao, Yu, Zhao, Shafran, Griffiths, Cao, Narasimhan. NeurIPS 2023. [paper](https://proceedings.neurips.cc/paper_files/paper/2023/hash/271db9922b8d1f4dd7aaef84ed5ac703-Abstract-Conference.html)
      Note: search-based prompting baseline.
 
